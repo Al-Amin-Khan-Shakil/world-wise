@@ -1,0 +1,10 @@
+.nav {
+  background-color: rgba(255, 150, 155, 0.911);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
