@@ -8,3 +8,7 @@
   justify-content: space-between;
   font-size: 24px;
 }
+
+.nav :global(.active) {
+  color: rgba(36, 175, 78, 0.863);
+}

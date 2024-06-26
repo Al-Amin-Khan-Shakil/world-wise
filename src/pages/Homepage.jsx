@@ -5,7 +5,7 @@ export default function Homepage() {
   return (
     <div>
       <PageNav />
-      <h2>World Wise</h2>
+      <h1 className="test">World Wise</h1>
       <Link to="/app">App layout</Link>
     </div>
   );
