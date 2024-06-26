@@ -1,10 +1,10 @@
 import PageNav from "../components/PageNav";
 
-export default function Product() {
+export default function TravelBag() {
   return (
     <div>
       <PageNav />
-      <h2>Product</h2>
+      <h2>Travel Bag</h2>
     </div>
   );
 }
