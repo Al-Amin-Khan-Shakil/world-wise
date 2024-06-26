@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Product from "./pages/Product";
+import Pricing from "./pages/Pricing";
+import Homepage from "./pages/Homepage";
+import PageNotFound from "./pages/PageNotFound";
+import TravelBag from "./pages/TravelBag";
+import AppLayout from "./pages/AppLayout";
+import Login from "./pages/Login";
 
 function App() {
-  const [count, setCount] = useState();
   return (
     <div>
-      <h1>Hello Vite!!!</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="product" element={<Product />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="bagpack" element={<TravelBag />} />
+          <Route path="app" element={<AppLayout />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
