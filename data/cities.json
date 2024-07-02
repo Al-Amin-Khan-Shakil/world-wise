@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,127 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "1a77",
+      "cityName": "Arun",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-07-02T15:01:38.633Z",
+      "notes": "Super Cool",
+      "position": {
+        "lat": "27.15692045688088",
+        "lng": "87.20947265625001"
+      }
+    },
+    {
+      "id": "9352",
+      "cityName": "Htantabin",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2024-04-30T15:02:55.000Z",
+      "notes": "It was fucking good exp\n",
+      "position": {
+        "lat": "17.035777250427195",
+        "lng": "95.91064453125001"
+      }
+    },
+    {
+      "id": "3328",
+      "cityName": "Tinh Thua Thien-Hue",
+      "country": "Viet Nam",
+      "emoji": "🇻🇳",
+      "date": "2024-02-28T15:04:05.000Z",
+      "notes": "Bang Bang",
+      "position": {
+        "lat": "16.29905101458183",
+        "lng": "108.12744140625001"
+      }
+    },
+    {
+      "id": "8989",
+      "cityName": "Tuncheng",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2024-07-02T15:06:40.471Z",
+      "notes": "Bang Bang Bang Bang",
+      "position": {
+        "lat": "19.311143355064655",
+        "lng": "110.03906250000001"
+      }
+    },
+    {
+      "id": "d13f",
+      "cityName": "Silkeborg",
+      "country": "Denmark",
+      "emoji": "🇩🇰",
+      "date": "2024-01-19T15:10:24.000Z",
+      "notes": "Bang Bang with tall white girl.",
+      "position": {
+        "lat": "56.26776108757582",
+        "lng": "9.316406250000002"
+      }
+    },
+    {
+      "id": "23f0",
+      "cityName": "New Ross",
+      "country": "Ireland",
+      "emoji": "🇮🇪",
+      "date": "2024-03-12T15:11:52.000Z",
+      "notes": "Bang Bang with Irish chicks.",
+      "position": {
+        "lat": "52.482780222078226",
+        "lng": "-6.855468750000001"
+      }
+    },
+    {
+      "id": "bc4e",
+      "cityName": "Middle",
+      "country": "Isle of Man",
+      "emoji": "🇮🇲",
+      "date": "2023-11-16T15:12:37.000Z",
+      "notes": "Oh!!! it was super bang bang",
+      "position": {
+        "lat": "54.226707764386695",
+        "lng": "-4.504394531250001"
+      }
+    },
+    {
+      "id": "880b",
+      "cityName": "Ouad Naga",
+      "country": "Mauritania",
+      "emoji": "🇲🇷",
+      "date": "2023-12-13T15:17:21.000Z",
+      "notes": "All real bang bangs are here.",
+      "position": {
+        "lat": "17.811456088564483",
+        "lng": "-15.908203125000002"
+      }
+    },
+    {
+      "id": "983b",
+      "cityName": "Bennichchab",
+      "country": "Mauritania",
+      "emoji": "🇲🇷",
+      "date": "2024-07-02T15:19:38.873Z",
+      "notes": "Real bang bang calls me back again.",
+      "position": {
+        "lat": "19.89072302399691",
+        "lng": "-14.501953125000002"
+      }
+    },
+    {
+      "id": "da5f",
+      "cityName": "Ortakoy",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-10-17T18:00:00.000Z",
+      "notes": "Super super bang bang",
+      "position": {
+        "lat": "38.685509760012025",
+        "lng": "34.27734375000001"
+      }
     }
   ]
 }
