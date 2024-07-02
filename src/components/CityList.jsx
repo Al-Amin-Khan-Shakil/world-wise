@@ -7,9 +7,11 @@ import { useCities } from "../contexts/CitiesContext";
 export default function CityList() {
   const { cities, isLoading } = useCities();
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) {
+    return <Spinner />;
+  }
 
-  if (!cities.length)
+  if (isLoading && !cities.length)
     return (
       <Message
         message={"Add your first city by clicking on a city on the map"}
