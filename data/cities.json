@@ -35,6 +35,30 @@
         "lat": "19.16592425362802",
         "lng": "109.6435546875"
       }
+    },
+    {
+      "id": "70bd",
+      "cityName": "Taipei",
+      "country": "Taiwan (Province of China)",
+      "emoji": "🇹🇼",
+      "date": "2024-07-03T14:35:42.954Z",
+      "notes": "Cool asain bang bang.",
+      "position": {
+        "lat": "25.005972656239187",
+        "lng": "121.57470703125001"
+      }
+    },
+    {
+      "id": "0607",
+      "cityName": "Nakhodka",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2024-07-03T14:36:29.960Z",
+      "notes": "Bang Bang on the beach.",
+      "position": {
+        "lat": "42.827638636242284",
+        "lng": "132.89062500000003"
+      }
     }
   ]
 }
