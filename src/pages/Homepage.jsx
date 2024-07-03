@@ -10,9 +10,9 @@ export default function Homepage() {
   const navigateApp = () => {
     if (isAuthenticated === true) {
       navigate("/app");
+    } else {
+      navigate("/login");
     }
-
-    navigate("/login");
   };
 
   return (
@@ -29,7 +29,7 @@ export default function Homepage() {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </p>
-        <button className="cta" onClick={navigateApp}>
+        <button className={styles.cta} onClick={navigateApp}>
           Start tracking now
         </button>
       </section>
