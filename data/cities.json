@@ -1,27 +1,39 @@
 {
   "cities": [
     {
-      "id": "43a2",
-      "cityName": "Dhaka",
-      "country": "Bangladesh",
-      "emoji": "🇧🇩",
-      "date": "2024-04-09T08:23:45.000Z",
-      "notes": "Fix my computer.",
-      "position": {
-        "lat": "23.745125865762933",
-        "lng": "90.43945312500001"
-      }
-    },
-    {
-      "id": "e923",
+      "id": "9f59",
       "cityName": "Kathmandu",
       "country": "Nepal",
       "emoji": "🇳🇵",
-      "date": "2024-07-01T08:25:56.000Z",
-      "notes": "Bang Bang",
+      "date": "2024-07-04T09:03:00.000Z",
+      "notes": "Let's do some bang band",
       "position": {
         "lat": "27.68352808378776",
         "lng": "85.34179687500001"
+      }
+    },
+    {
+      "id": "cdc2",
+      "cityName": "Mahibadhoo",
+      "country": "Maldives",
+      "emoji": "🇲🇻",
+      "date": "2024-04-10T09:14:09.000Z",
+      "notes": "Super bang bang",
+      "position": {
+        "lat": "3.699818641574841",
+        "lng": "73.16894531250001"
+      }
+    },
+    {
+      "id": "766c",
+      "cityName": "Yacha",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2024-07-03T09:28:17.316Z",
+      "notes": "Bang Bang with Asian chicks.",
+      "position": {
+        "lat": "19.16592425362802",
+        "lng": "109.6435546875"
       }
     }
   ]
