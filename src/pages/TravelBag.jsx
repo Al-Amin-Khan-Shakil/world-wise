@@ -1,10 +1,11 @@
 import PageNav from "../components/PageNav";
+import styles from "./TravelBag.module.css";
 
 export default function TravelBag() {
   return (
-    <div>
+    <main className={styles.bagpack}>
       <PageNav />
-      <h2>Travel Bag</h2>
-    </div>
+      <section></section>
+    </main>
   );
 }
