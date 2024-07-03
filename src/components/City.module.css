@@ -16,6 +16,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-family: "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .city h6 {
