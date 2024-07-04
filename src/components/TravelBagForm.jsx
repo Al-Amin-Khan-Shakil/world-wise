@@ -5,9 +5,9 @@ import { useTravelBag } from "../contexts/TravelBagContext";
 export default function TravelBagForm() {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const { handleSubmit } = useTravelBag();
+  const { handleAddItems } = useTravelBag();
 
-  const handleSubnit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!description) return;
@@ -19,13 +19,13 @@ export default function TravelBagForm() {
       id: uuidv4(),
     };
 
-    handleSubmit(newItem);
+    handleAddItems(newItem);
     setDescription("");
     setQuantity(1);
   };
 
   return (
-    <form onSubmit={handleSubnit} className="add-form">
+    <form onSubmit={handleSubmit} className="add-form">
       <h3>What do you need for your 😍 trip?</h3>
       <select
         value={quantity}
