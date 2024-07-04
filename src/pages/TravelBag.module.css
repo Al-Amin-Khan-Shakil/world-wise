@@ -7,9 +7,15 @@
 
 .bagpack section {
   width: clamp(80rem, 80%, 90rem);
-  margin: 6rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
+  margin: 3rem auto 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.bagpack h2 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
 }
