@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTravelBag } from "../contexts/TravelBagContext";
 import Item from "./Item";
+import styles from "./PackingList.module.css";
 
 export default function PackingList() {
   const [sortBy, setSortBy] = useState("input");
@@ -23,7 +24,7 @@ export default function PackingList() {
   }
 
   return (
-    <div className="list">
+    <div className={styles.list}>
       <ul>
         {sortedItems.length !== 0 ? (
           sortedItems.map((item) => <Item key={item.id} item={item} />)
@@ -42,7 +43,11 @@ export default function PackingList() {
             <option value="description">Sort by description</option>
             <option value="packed">Sort by packed status</option>
           </select>
-          <button type="button" onClick={handleClearList}>
+          <button
+            type="button"
+            onClick={handleClearList}
+            className={styles.clearButton}
+          >
             Clear list
           </button>
         </div>

@@ -1,16 +1,17 @@
 import { useTravelBag } from "../contexts/TravelBagContext";
+import styles from "./PackingPercent.module.css";
 
 export default function PackingPercent() {
   const { items } = useTravelBag();
 
   if (items.length === 0) {
     return (
-      <footer className="stats">
+      <div className={styles.stats}>
         <em>
           Begin including items in your packing list for a smooth journey ahead!
           🚀
         </em>
-      </footer>
+      </div>
     );
   }
 
@@ -19,7 +20,7 @@ export default function PackingPercent() {
   const percentage = Math.round((numPacked / numItems) * 100);
 
   return (
-    <div className="stats">
+    <div className={styles.stats}>
       <em>
         {percentage === 100
           ? "You got everything! Ready to go ✈️"

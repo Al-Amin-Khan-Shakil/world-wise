@@ -6,16 +6,17 @@
 }
 
 .bagpack section {
-  width: clamp(80rem, 80%, 90rem);
-  margin: 3rem auto 6rem;
+  width: clamp(100%, 80%, 100%);
+  margin: 3rem auto 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 78vh;
 }
 
 .bagpack h2 {
   font-size: 3.5rem;
   line-height: 1.2;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
