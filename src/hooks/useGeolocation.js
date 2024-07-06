@@ -11,7 +11,7 @@ export default function useGeoLocation(defaultPosition = null) {
     }
 
     setIsLoading(true);
-    navigator.geolocation.getCurrentPosition(
+    const userLocation = navigator.geolocation.getCurrentPosition(
       (pos) => {
         setPosition({
           lat: pos.coords.latitude,
@@ -24,9 +24,14 @@ export default function useGeoLocation(defaultPosition = null) {
         setIsLoading(false);
       },
     );
+
+    return userLocation;
   };
 
   return {
-    isLoading, position, error, getPosition,
+    isLoading,
+    position,
+    error,
+    getPosition,
   };
 }

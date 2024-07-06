@@ -18,7 +18,9 @@ function User() {
         Welcome,
         {user.name}
       </span>
-      <button onClick={handleClick}>Logout</button>
+      <button onClick={handleClick} type="button">
+        Logout
+      </button>
     </div>
   );
 }

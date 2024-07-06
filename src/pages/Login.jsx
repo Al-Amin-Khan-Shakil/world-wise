@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Handler } from 'leaflet';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 import PageNav from '../components/PageNav';
@@ -25,6 +24,7 @@ export default function Login() {
   }, [isAuthenticated, navigate]);
 
   return (
+    /* eslint-disable */
     <main className={styles.login}>
       <PageNav />
       <form className={styles.form} onSubmit={handleSubmit}>

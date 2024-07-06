@@ -62,7 +62,9 @@ function TravelBagProvider({ children }) {
 function useTravelBag() {
   const context = useContext(TravelBagContext);
 
-  if (context === undefined) { throw new Error('Travel bag context used outside the travel bag context'); }
+  if (context === undefined) {
+    throw new Error('Travel bag context used outside the travel bag context');
+  }
 
   return context;
 }

@@ -56,6 +56,7 @@ function reducer(state, action) {
       };
 
     default:
+      throw new Error('Unknown action');
   }
 }
 
@@ -168,7 +169,9 @@ function CitiesProvider({ children }) {
 function useCities() {
   const context = useContext(CitiesContext);
 
-  if (context === undefined) { throw new Error('Cities context was used outside the cities provider'); }
+  if (context === undefined) {
+    throw new Error('Cities context was used outside the cities provider');
+  }
 
   return context;
 }

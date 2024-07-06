@@ -84,13 +84,16 @@ function Form() {
 
   if (isLoadingGeocode) return <Spinner />;
 
-  if (!mapLat && !mapLng) { return <Message message="Start by clicking somewhere on the map" />; }
+  if (!mapLat && !mapLng) {
+    return <Message message="Start by clicking somewhere on the map" />;
+  }
 
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
+    /* eslint-disable */
     <form
-      className={`${styles.form} ${isLoading ? styles.loading : ''}`}
+      className={`${styles.form} ${isLoading ? styles.loading : ""}`}
       onSubmit={handleSubmit}
     >
       <div className={styles.row}>
@@ -102,12 +105,10 @@ function Form() {
         />
         <span className={styles.flag}>{emoji}</span>
       </div>
-
       <div className={styles.row}>
         <label htmlFor="date">
           When did you go to
-          {cityName}
-          ?
+          {cityName}?
         </label>
         <DatePicker
           id="date"
@@ -116,7 +117,6 @@ function Form() {
           dateFormat="dd/MM/yyyy"
         />
       </div>
-
       <div className={styles.row}>
         <label htmlFor="notes">
           Notes about your trip to
@@ -128,7 +128,6 @@ function Form() {
           value={notes}
         />
       </div>
-
       <div className={styles.buttons}>
         <Button type="primary">Add</Button>
         <BackButton />
