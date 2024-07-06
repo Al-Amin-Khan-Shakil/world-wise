@@ -1,0 +1,38 @@
+.addForm {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 80%;
+}
+
+.addForm h3 {
+  margin-right: 1.6rem;
+  font-size: 2.6rem;
+}
+
+.addForm div {
+  display: flex;
+  gap: 1rem;
+}
+
+.addForm button,
+.addForm select,
+.addForm input {
+  background-color: var(--color-light--3);
+  color: var(--color-dark--2);
+  font-family: inherit;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 2.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.addForm button {
+  text-transform: uppercase;
+  background-color: var(--color-brand--2);
+}

@@ -13,6 +13,7 @@ import Form from "./components/Form";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import { TravelBagProvider } from "./contexts/TravelBagContext";
 
 function App() {
   return (
@@ -24,7 +25,14 @@ function App() {
               <Route index element={<Homepage />} />
               <Route path="product" element={<Product />} />
               <Route path="pricing" element={<Pricing />} />
-              <Route path="bagpack" element={<TravelBag />} />
+              <Route
+                path="bagpack"
+                element={
+                  <TravelBagProvider>
+                    <TravelBag />
+                  </TravelBagProvider>
+                }
+              />
               <Route
                 path="app"
                 element={

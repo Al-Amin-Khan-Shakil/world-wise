@@ -1,0 +1,39 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 1rem 2rem;
+  border-left: 5px solid var(--color-brand--2);
+}
+
+.listItem input[type="checkbox"] {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #e5771f;
+}
+
+.listItem span {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  flex: 1;
+}
+
+.listItem .deleteBtn {
+  height: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.listItem .deleteBtn:hover {
+  background-color: var(--color-brand--1);
+  color: var(--color-dark--1);
+}
