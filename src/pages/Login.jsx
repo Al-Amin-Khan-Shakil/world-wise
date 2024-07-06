@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import styles from "./Login.module.css";
-import PageNav from "../components/PageNav";
-import { Handler } from "leaflet";
-import { useAuth } from "../contexts/FakeAuthContext";
-import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+import { useEffect, useState } from 'react';
+import { Handler } from 'leaflet';
+import { useNavigate } from 'react-router-dom';
+import styles from './Login.module.css';
+import PageNav from '../components/PageNav';
+import { useAuth } from '../contexts/FakeAuthContext';
+import Button from '../components/Button';
 
 export default function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("jack@example.com");
-  const [password, setPassword] = useState("qwerty");
+  const [email, setEmail] = useState('jack@example.com');
+  const [password, setPassword] = useState('qwerty');
   const { login, isAuthenticated } = useAuth();
 
   const handleSubmit = (e) => {
@@ -21,7 +21,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/app", { replace: true });
+    if (isAuthenticated) navigate('/app', { replace: true });
   }, [isAuthenticated, navigate]);
 
   return (

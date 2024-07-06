@@ -1,16 +1,18 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext, useContext, useEffect, useState,
+} from 'react';
 
 const TravelBagContext = createContext();
 
 function TravelBagProvider({ children }) {
-  const savedItems = localStorage.getItem("items")
-    ? JSON.parse(localStorage.getItem("items"))
+  const savedItems = localStorage.getItem('items')
+    ? JSON.parse(localStorage.getItem('items'))
     : [];
 
   const [items, setItems] = useState(savedItems);
 
   useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(items));
+    localStorage.setItem('items', JSON.stringify(items));
   }, [items]);
 
   const handleAddItems = (newItem) => {
@@ -36,7 +38,7 @@ function TravelBagProvider({ children }) {
 
   const handleClearList = () => {
     const confirmed = window.confirm(
-      "Are you sure you want to delete all items?"
+      'Are you sure you want to delete all items?',
     );
 
     if (confirmed) setItems([]);
@@ -60,8 +62,7 @@ function TravelBagProvider({ children }) {
 function useTravelBag() {
   const context = useContext(TravelBagContext);
 
-  if (context === undefined)
-    throw new Error("Travel bag context used outside the travel bag context");
+  if (context === undefined) { throw new Error('Travel bag context used outside the travel bag context'); }
 
   return context;
 }

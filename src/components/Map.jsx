@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
   MapContainer,
   TileLayer,
@@ -6,13 +6,13 @@ import {
   Popup,
   useMap,
   useMapEvent,
-} from "react-leaflet";
-import styles from "./Map.module.css";
-import { useEffect, useState } from "react";
-import { useCities } from "../contexts/CitiesContext";
-import useGeoLocation from "../hooks/useGeolocation";
-import Button from "./Button";
-import useUrlPosition from "../hooks/useUrlPosition";
+} from 'react-leaflet';
+import { useEffect, useState } from 'react';
+import styles from './Map.module.css';
+import { useCities } from '../contexts/CitiesContext';
+import useGeoLocation from '../hooks/useGeolocation';
+import Button from './Button';
+import useUrlPosition from '../hooks/useUrlPosition';
 
 export default function Map() {
   const [mapPosition, setMapPosition] = useState([5, 0]);
@@ -39,13 +39,13 @@ export default function Map() {
   return (
     <div className={styles.mapContainer}>
       <Button type="position" onClick={getPosition}>
-        {isLoadingPosition ? "Loading..." : "Use Your Position"}
+        {isLoadingPosition ? 'Loading...' : 'Use Your Position'}
       </Button>
 
       <MapContainer
         center={mapPosition}
         zoom={6}
-        scrollWheelZoom={true}
+        scrollWheelZoom
         className={styles.map}
       >
         <TileLayer
@@ -58,7 +58,9 @@ export default function Map() {
             key={city.id}
           >
             <Popup>
-              <span>{city.emoji}</span> <span>{city.cityName}</span>
+              <span>{city.emoji}</span>
+              {' '}
+              <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}

@@ -1,5 +1,5 @@
-import { useTravelBag } from "../contexts/TravelBagContext";
-import styles from "./PackingPercent.module.css";
+import { useTravelBag } from '../contexts/TravelBagContext';
+import styles from './PackingPercent.module.css';
 
 export default function PackingPercent() {
   const { items } = useTravelBag();
@@ -23,7 +23,7 @@ export default function PackingPercent() {
     <div className={styles.stats}>
       <em>
         {percentage === 100
-          ? "You got everything! Ready to go ✈️"
+          ? 'You got everything! Ready to go ✈️'
           : ` 💼 You have ${numItems} items on your list, and you already packed ${numPacked} (${percentage}%)`}
       </em>
     </div>
