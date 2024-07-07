@@ -6,7 +6,9 @@
 }
 
 .product section {
+  /* stylelint-disable */
   width: clamp(80rem, 80%, 90rem);
+  /* stylelint-enable */
   margin: 6rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

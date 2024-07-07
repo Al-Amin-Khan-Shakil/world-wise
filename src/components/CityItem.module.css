@@ -11,18 +11,11 @@
   cursor: pointer;
   color: inherit;
   text-decoration: none;
-  font-family:
-    "NotoColorEmojiLimited",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  /* stylelint-disable */
+  font-family: "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable */
 }
 
 .cityItem--active {
@@ -47,7 +40,9 @@
 
 .deleteBtn {
   height: 2rem;
+  /* stylelint-disable */
   aspect-ratio: 1;
+  /* stylelint-enable */
   border-radius: 50%;
   border: none;
   background-color: var(--color-dark--1);
