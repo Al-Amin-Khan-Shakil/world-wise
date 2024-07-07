@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { useTravelBag } from "../contexts/TravelBagContext";
-import styles from "./TravelBagForm.module.css";
+import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useTravelBag } from '../contexts/TravelBagContext';
+import styles from './TravelBagForm.module.css';
 
 export default function TravelBagForm() {
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
   const { handleAddItems } = useTravelBag();
 
@@ -21,7 +21,7 @@ export default function TravelBagForm() {
     };
 
     handleAddItems(newItem);
-    setDescription("");
+    setDescription('');
     setQuantity(1);
   };
 

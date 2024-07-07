@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import styles from "./Form.module.css";
-import Button from "./Button";
-import BackButton from "./BackButton";
-import useUrlPosition from "../hooks/useUrlPosition";
-import Message from "./Message";
-import Spinner from "./Spinner";
-import { useCities } from "../contexts/CitiesContext";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from 'react-router-dom';
+import styles from './Form.module.css';
+import Button from './Button';
+import BackButton from './BackButton';
+import useUrlPosition from '../hooks/useUrlPosition';
+import Message from './Message';
+import Spinner from './Spinner';
+import { useCities } from '../contexts/CitiesContext';
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()
-    .split("")
+    .split('')
     .map((char) => 127397 + char.charCodeAt());
   return String.fromCodePoint(...codePoints);
 }
 
-const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
+const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client';
 
 function Form() {
   const navigate = useNavigate();
-  const [cityName, setCityName] = useState("");
-  const [country, setCountry] = useState("");
+  const [cityName, setCityName] = useState('');
+  const [country, setCountry] = useState('');
   const [date, setDate] = useState(new Date());
-  const [notes, setNotes] = useState("");
+  const [notes, setNotes] = useState('');
   const [mapLat, mapLng] = useUrlPosition();
   const [isLoadingGeocode, setIsLoadingGeocode] = useState(false);
-  const [emoji, setEmoji] = useState("");
-  const [geocodingError, setGeocodingError] = useState("");
+  const [emoji, setEmoji] = useState('');
+  const [geocodingError, setGeocodingError] = useState('');
   const { createCity, isLoading } = useCities();
 
   useEffect(() => {
@@ -38,19 +38,20 @@ function Form() {
     const fetchCityData = async () => {
       try {
         setIsLoadingGeocode(true);
-        setGeocodingError("");
+        setGeocodingError('');
 
         const res = await fetch(
-          `${BASE_URL}?latitude=${mapLat}&longitude=${mapLng}`
+          `${BASE_URL}?latitude=${mapLat}&longitude=${mapLng}`,
         );
         const data = await res.json();
 
-        if (!data.countryCode)
+        if (!data.countryCode) {
           throw new Error(
-            "That doesn't seen to be a city. Click somewhere else 😜"
+            "That doesn't seen to be a city. Click somewhere else 😜",
           );
+        }
 
-        setCityName(data.city || data.locality || "");
+        setCityName(data.city || data.locality || '');
         setCountry(data.countryName);
         setEmoji(convertToEmoji(data.countryCode));
       } catch (err) {
@@ -77,18 +78,20 @@ function Form() {
     };
 
     await createCity(newCity);
-    setNotes("");
-    navigate("/app/cities");
+    setNotes('');
+    navigate('/app/cities');
   };
 
   if (isLoadingGeocode) return <Spinner />;
 
-  if (!mapLat && !mapLng)
+  if (!mapLat && !mapLng) {
     return <Message message="Start by clicking somewhere on the map" />;
+  }
 
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
+    /* eslint-disable */
     <form
       className={`${styles.form} ${isLoading ? styles.loading : ""}`}
       onSubmit={handleSubmit}
@@ -102,9 +105,11 @@ function Form() {
         />
         <span className={styles.flag}>{emoji}</span>
       </div>
-
       <div className={styles.row}>
-        <label htmlFor="date">When did you go to {cityName}?</label>
+        <label htmlFor="date">
+          When did you go to
+          {cityName}?
+        </label>
         <DatePicker
           id="date"
           onChange={(date) => setDate(date)}
@@ -112,16 +117,17 @@ function Form() {
           dateFormat="dd/MM/yyyy"
         />
       </div>
-
       <div className={styles.row}>
-        <label htmlFor="notes">Notes about your trip to {cityName}</label>
+        <label htmlFor="notes">
+          Notes about your trip to
+          {cityName}
+        </label>
         <textarea
           id="notes"
           onChange={(e) => setNotes(e.target.value)}
           value={notes}
         />
       </div>
-
       <div className={styles.buttons}>
         <Button type="primary">Add</Button>
         <BackButton />

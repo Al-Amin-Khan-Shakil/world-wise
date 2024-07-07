@@ -1,23 +1,23 @@
-import { useState } from "react";
-import { useTravelBag } from "../contexts/TravelBagContext";
-import Item from "./Item";
-import styles from "./PackingList.module.css";
+import { useState } from 'react';
+import { useTravelBag } from '../contexts/TravelBagContext';
+import Item from './Item';
+import styles from './PackingList.module.css';
 
 export default function PackingList() {
-  const [sortBy, setSortBy] = useState("input");
+  const [sortBy, setSortBy] = useState('input');
   const { items, handleClearList } = useTravelBag();
 
   let sortedItems;
 
-  if (sortBy === "input") sortedItems = items;
+  if (sortBy === 'input') sortedItems = items;
 
-  if (sortBy === "description") {
+  if (sortBy === 'description') {
     sortedItems = items
       .slice()
       .sort((a, b) => a.description.localeCompare(b.description));
   }
 
-  if (sortBy === "packed") {
+  if (sortBy === 'packed') {
     sortedItems = items
       .slice()
       .sort((a, b) => Number(a.packed) - Number(b.packed));
@@ -52,7 +52,7 @@ export default function PackingList() {
           </button>
         </div>
       ) : (
-        ""
+        ''
       )}
     </div>
   );

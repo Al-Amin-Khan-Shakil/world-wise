@@ -1,5 +1,5 @@
-import { useTravelBag } from "../contexts/TravelBagContext";
-import styles from "./Item.module.css";
+import { useTravelBag } from '../contexts/TravelBagContext';
+import styles from './Item.module.css';
 
 export default function Item({ item }) {
   const { handleToggleItems, handleDeleteItem } = useTravelBag();
@@ -10,10 +10,14 @@ export default function Item({ item }) {
         type="checkbox"
         onChange={() => handleToggleItems(item.id)}
         checked={item.packed}
-      />{" "}
-      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
-        {item.quantity} {item.description}
-      </span>{" "}
+      />
+      {' '}
+      <span style={item.packed ? { textDecoration: 'line-through' } : {}}>
+        {item.quantity}
+        {' '}
+        {item.description}
+      </span>
+      {' '}
       <button
         type="button"
         onClick={() => handleDeleteItem(item.id)}

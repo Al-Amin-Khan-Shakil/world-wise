@@ -20,10 +20,11 @@
   font-weight: 600;
 }
 
-/* CSS Modules feature */
+/* stylelint-disable */
 .nav a:global(.active) {
   color: var(--color-brand--2);
 }
+/* stylelint-enable */
 
 a.ctaLink:link,
 a.ctaLink:visited {

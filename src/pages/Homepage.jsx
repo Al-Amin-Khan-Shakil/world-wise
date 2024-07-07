@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
-import styles from "./Homepage.module.css";
-import PageNav from "../components/PageNav";
-import { useAuth } from "../contexts/FakeAuthContext";
+import { useNavigate } from 'react-router-dom';
+import styles from './Homepage.module.css';
+import PageNav from '../components/PageNav';
+import { useAuth } from '../contexts/FakeAuthContext';
 
 export default function Homepage() {
   const navigate = useNavigate();
@@ -9,9 +9,9 @@ export default function Homepage() {
 
   const navigateApp = () => {
     if (isAuthenticated === true) {
-      navigate("/app");
+      navigate('/app');
     } else {
-      navigate("/login");
+      navigate('/login');
     }
   };
 
@@ -29,7 +29,7 @@ export default function Homepage() {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </p>
-        <button className={styles.cta} onClick={navigateApp}>
+        <button className={styles.cta} onClick={navigateApp} type="button">
           Start tracking now
         </button>
       </section>

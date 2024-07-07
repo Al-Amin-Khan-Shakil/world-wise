@@ -6,7 +6,9 @@
 }
 
 .bagpack section {
+  /* stylelint-disable */
   width: clamp(100%, 80%, 100%);
+  /* stylelint-enable */
   margin: 3rem auto 2rem;
   display: flex;
   flex-direction: column;

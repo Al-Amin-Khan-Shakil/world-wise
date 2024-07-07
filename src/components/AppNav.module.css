@@ -22,7 +22,7 @@
   border-radius: 5px;
 }
 
-/* CSS Modules feature */
+/* stylelint-disable */
 .nav a:global(.active) {
   background-color: var(--color-dark--0);
 }

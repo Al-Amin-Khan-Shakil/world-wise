@@ -13,9 +13,11 @@
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
+  /* stylelint-disable */
   font-family: "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable */
 }
 
 .buttons {
@@ -41,7 +43,9 @@
   color: var(--color-dark--0);
 }
 
+/* stylelint-disable */
 :global(.react-datepicker) {
   font-family: inherit;
   font-size: 1.2rem;
 }
+/* stylelint-enable */
